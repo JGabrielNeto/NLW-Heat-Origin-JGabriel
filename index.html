@@ -28,16 +28,18 @@
                     JGabrielNeto
                 </a>
 
-                    <p>Dev enthusiast, currently working as a lawyer</p>
+                    <p>Dev enthusiast, still learning the basics but already loving it.</p>
                     
                     <!-- tag para lista não ordenada -->
-                    <ul>
-                        <!-- subtag para items da lista não ordenada
-                        target="blank" abre o link em uma nova aba 
-                        target blank não estava funcionando no Chrome, por isso eu adicoinei um onclick window.open,-->
-                        <li>
-                            <a href="#" onclick= 'window.open("https://www.youtube.com");return false;'>
-                                <img src="images/yt.svg" alt="ícone youtube" target="_blank"/>
+                    <ul id="ytLink">
+                        <!-- subtag para items da lista não ordenada.
+                        target="blank" abre o link em uma nova aba.
+                        target blank não estava funcionando no Chrome, por isso eu adicoinei um onclick window.open.
+                        Não tava funcionando pq constava na imagem, ao invés do link em si. Mas eu fiquei com preguiça de alterar todos
+                        então mantive como estava e só alterei o do youtube para fins de aprender a aplicar o JS e o DOM no arquivo -->
+                        <li class="youtube">
+                            <a href="https://www.youtube.com" target="_blank">
+                                <img src="images/yt.svg" alt="ícone youtube"/>
                             </a>
                         </li>
                         <li>
@@ -66,9 +68,23 @@
 
         <script>
             const youtube = "channel/UCOlSvMWH3K2GTzfutS-PPsg"
+            // padrões de escrita: camelCase; PascalCase/ snake_case
             
+            //Primeira aplicação de DOM
+            function changeLinks() {
+                //através do comando "document" eu consigo acessar o DOM o documento com as respectivas identificações.
+                
+                // estrutura da função for(var, if, function of if)else stop;,
+                //ex: for(let i=0; i <= 10; i++); essa função está criando uma
+                //variável let i, e dando a ela valor 0, if(i <= 10) {i++} ou seja, soma i+1, else a função for para.
+                
+                
+                for(let li of ytLink.children) {
+                    alert(li.getAttribute('class'))
+                }
+            }
             
-           
+           changeLinks()
         </script>
 
     </body>
