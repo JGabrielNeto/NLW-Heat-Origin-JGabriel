@@ -1,0 +1,75 @@
+<!-- HTML é linguagem de marcação de hypertexto, ou seja, um texto com links -->
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <title>João Gabriel - DoWhile 2021</title>
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <main>
+            <!-- esta é a caixa do meio, que vai conter a foto e os links -->
+            <div class="container">
+                <div class="avatar">
+                    <span>
+                        <img src="images/build.svg" alt="Selo Rocketseat">
+
+                    </span>
+                    <img src="images/photo-jg.jpg" alt="Foto pessoal"/>
+                </div>
+
+                <h1>João Gabriel Neto</h1>
+                <a href="#" onclick= 'window.open("https://github.com/JGabrielNeto");return false;'>
+                    <img src="images/github 2.svg" alt="ícone github" target="_blank" />
+                    JGabrielNeto
+                </a>
+
+                    <p>Dev enthusiast, currently working as a lawyer</p>
+                    
+                    <!-- tag para lista não ordenada -->
+                    <ul>
+                        <!-- subtag para items da lista não ordenada
+                        target="blank" abre o link em uma nova aba 
+                        target blank não estava funcionando no Chrome, por isso eu adicoinei um onclick window.open,-->
+                        <li>
+                            <a href="#" onclick= 'window.open("https://www.youtube.com");return false;'>
+                                <img src="images/yt.svg" alt="ícone youtube" target="_blank"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" onclick= 'window.open("https://www.facebook.com/joaogabriel.dantasneto");return false;'>
+
+                                <img src="images/fb.svg" alt="ícone facebook" target="_blank"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" onclick= 'window.open("https://www.instagram.com/joaogabrielsneto");return false;'>
+                            
+                                <img src="images/insta.svg" alt="ícone instagram" target="_blank"/>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" onclick= 'window.open("https://twitter.com/JGabrielNeto_");return false;'>
+                               
+                                <img src="images/tt.svg" alt="ícone twitter" target="_blank"/>
+                            </a>
+                        </li>
+                    </ul>
+                 
+            </div>
+            
+        </main>
+
+        <script>
+            const youtube = "channel/UCOlSvMWH3K2GTzfutS-PPsg"
+            
+            
+           
+        </script>
+
+    </body>
+</html>
