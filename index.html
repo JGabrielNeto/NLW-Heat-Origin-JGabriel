@@ -36,9 +36,9 @@
                         target="blank" abre o link em uma nova aba.
                         target blank não estava funcionando no Chrome, por isso eu adicoinei um onclick window.open.
                         Não tava funcionando pq constava na imagem, ao invés do link em si. Essa alteração já foi implementada-->
-                        <li class="youtube">
-                            <a href="https://www.youtube.com/" target="_blank">
-                                <img src="images/yt.svg" alt="ícone youtube"/>
+                        <li class="linkedin">
+                            <a href="https://www.linkedin.com/in/jgabrielneto-dev/" target="_blank">
+                                <img src="images/linkedin.svg" alt="ícone linkedin"/>
                             </a>
                         </li>
                         <li class="facebook">
@@ -67,12 +67,12 @@
 
         <script>
             const socialLinks = {
-            youtube: 'channel/UCOlSvMWH3K2GTzfutS-PPsg',
+           linkedin: 'in/jgabrielneto-dev/',
             facebook: 'joaogabriel.dantasneto',
             instagram: 'joaogabrielsneto',
             twitter: 'JGabrielNeto'
         }
-            // padrões de escrita: camelCase; PascalCase/ snake_case
+            // padrões de escrita: camelCase; PascalCase; snake_case
             
             //Primeira aplicação de DOM
             function changeLinks() {
@@ -91,6 +91,9 @@
              
                     //os [] tão chamando somando o valor de social da class equivalente ao social da const
                     //socialLinks().
+                    // os crases `` significam que a string abaixo é uma template string, ou seja, uma str que permite
+                    // expressões embutidas, o ${} é um placeholder, que eu posso utilizar para inserir variáveis ou arrays.
+                
                         li.children[0].href = `https://${social}.com/${socialLinks[social]}`;
                 }
             }
