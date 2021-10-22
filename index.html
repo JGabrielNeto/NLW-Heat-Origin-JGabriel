@@ -35,27 +35,26 @@
                         <!-- subtag para items da lista não ordenada.
                         target="blank" abre o link em uma nova aba.
                         target blank não estava funcionando no Chrome, por isso eu adicoinei um onclick window.open.
-                        Não tava funcionando pq constava na imagem, ao invés do link em si. Mas eu fiquei com preguiça de alterar todos
-                        então mantive como estava e só alterei o do youtube para fins de aprender a aplicar o JS e o DOM no arquivo -->
+                        Não tava funcionando pq constava na imagem, ao invés do link em si. Essa alteração já foi implementada-->
                         <li class="youtube">
-                            <a href="https://www.youtube.com" target="_blank">
+                            <a href="https://www.youtube.com/" target="_blank">
                                 <img src="images/yt.svg" alt="ícone youtube"/>
                             </a>
                         </li>
-                        <li>
-                            <a href="#" onclick= 'window.open("https://www.facebook.com/joaogabriel.dantasneto");return false;'>
+                        <li class="facebook">
+                            <a href="https://www.facebook.com/joaogabriel.dantasneto" target="_blank">
 
                                 <img src="images/fb.svg" alt="ícone facebook" target="_blank"/>
                             </a>
                         </li>
-                        <li>
-                            <a href="#" onclick= 'window.open("https://www.instagram.com/joaogabrielsneto");return false;'>
+                        <li class="instagram">
+                            <a href="https://www.instagram.com/joaogabrielsneto" target="_blank">
                             
                                 <img src="images/insta.svg" alt="ícone instagram" target="_blank"/>
                             </a>
                         </li>
-                        <li>
-                            <a href="#" onclick= 'window.open("https://twitter.com/JGabrielNeto_");return false;'>
+                        <li class="twitter">
+                            <a href="https://twitter.com/JGabrielNeto_" target="_blank">
                                
                                 <img src="images/tt.svg" alt="ícone twitter" target="_blank"/>
                             </a>
@@ -67,7 +66,12 @@
         </main>
 
         <script>
-            const youtube = "channel/UCOlSvMWH3K2GTzfutS-PPsg"
+            const socialLinks = {
+            youtube: 'channel/UCOlSvMWH3K2GTzfutS-PPsg',
+            facebook: 'joaogabriel.dantasneto',
+            instagram: 'joaogabrielsneto',
+            twitter: 'JGabrielNeto'
+        }
             // padrões de escrita: camelCase; PascalCase/ snake_case
             
             //Primeira aplicação de DOM
@@ -78,13 +82,18 @@
                 //ex: for(let i=0; i <= 10; i++); essa função está criando uma
                 //variável let i, e dando a ela valor 0, if(i <= 10) {i++} ou seja, soma i+1, else a função for para.
                 
-                
+                //essa for funcion está criando a variável let li, e pegando todos
+                //os itens filhos da id="ytLink" e armazenando. Dentro da variável foi
+                //criada uma constante social, que contém o atributo classe da variável li
+
                 for(let li of ytLink.children) {
-                    alert(li.getAttribute('class'))
+                    const social = li.getAttribute('class')
+             
+                    //os [] tão chamando somando o valor de social da class equivalente ao social da const
+                    //socialLinks().
+                        li.children[0].href = `https://${social}.com/${socialLinks[social]}`;    
                 }
             }
-            
-           changeLinks()
         </script>
 
     </body>
