@@ -19,16 +19,16 @@
                         <img src="images/build.svg" alt="Selo Rocketseat">
 
                     </span>
-                    <img src="images/photo-jg.jpg" alt="Foto pessoal"/>
+                    <img  id="gitAvatar" src="images/photo-jg.jpg" alt="Foto pessoal"/>
                 </div>
 
-                <h1>João Gabriel Neto</h1>
-                <a href="#" onclick= 'window.open("https://github.com/JGabrielNeto");return false;'>
+                <h1 id="gitName">teste nome github</h1>
+                <a id="gitLink" href="https://github.com/" target="_blank">
                     <img src="images/github 2.svg" alt="ícone github" target="_blank" />
-                    JGabrielNeto
+                    <span id="gitUser">user test</span>
                 </a>
 
-                    <p>Dev enthusiast, still learning the basics but already loving it.</p>
+                    <p id="gitBio">Dev enthusiast, still learning the basics but already loving it.</p>
                     
                     <!-- tag para lista não ordenada -->
                     <ul id="ytLink">
@@ -65,40 +65,7 @@
             
         </main>
 
-        <script>
-            const socialLinks = {
-           linkedin: 'in/jgabrielneto-dev/',
-            facebook: 'joaogabriel.dantasneto',
-            instagram: 'joaogabrielsneto',
-            twitter: 'JGabrielNeto'
-        }
-            // padrões de escrita: camelCase; PascalCase; snake_case
-            
-            //Primeira aplicação de DOM
-            function changeLinks() {
-                //através do comando "document" eu consigo acessar o DOM o documento com as respectivas identificações.
-                
-                // estrutura da função for(var, if, function of if)else stop;,
-                //ex: for(let i=0; i <= 10; i++); essa função está criando uma
-                //variável let i, e dando a ela valor 0, if(i <= 10) {i++} ou seja, soma i+1, else a função for para.
-                
-                //essa for funcion está criando a variável let li, e pegando todos
-                //os itens filhos da id="ytLink" e armazenando. Dentro da variável foi
-                //criada uma constante social, que contém o atributo classe da variável li
-
-                for(let li of ytLink.children) {
-                    const social = li.getAttribute('class')
-             
-                    //os [] tão chamando somando o valor de social da class equivalente ao social da const
-                    //socialLinks().
-                    // os crases `` significam que a string abaixo é uma template string, ou seja, uma str que permite
-                    // expressões embutidas, o ${} é um placeholder, que eu posso utilizar para inserir variáveis ou arrays.
-                
-                        li.children[0].href = `https://${social}.com/${socialLinks[social]}`;
-                }
-            }
-           changeLinks()
-        </script>
+        <script src="main.js"></script>
 
     </body>
 </html>
