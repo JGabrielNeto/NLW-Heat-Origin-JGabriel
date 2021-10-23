@@ -1,5 +1,5 @@
 const socialLinks = {
-     github: '',
+     github: 'JGabrielNeto',
      linkedin: 'in/jgabrielneto-dev/',
      facebook: 'joaogabriel.dantasneto',
      instagram: 'joaogabrielsneto',
