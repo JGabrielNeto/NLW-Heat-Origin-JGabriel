@@ -22,19 +22,6 @@ main{
     width: 100vw;
     height: 100vh;
     max-width: 485px;
-    margin-top: -5rem;
-}
-.logoDoWhile {
-    position: absolute;
-    top: 0;
-    background: rgba(0%, 0%, 0%, 0.3);
-    height: 42px;
-    width: 300px;
-    padding: .6rem;
-    text-align: center;
-    border-radius: 0.4rem;
-    margin-top: 41rem;
-
 }
 
 
@@ -100,6 +87,16 @@ ul {
     
 }
 
+.logoDoWhile {
+    position: absolute;
+    top: 0;
+    margin: 10vw auto 0;
+    left: 50vw;
+    margin-left: -155px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    border-radius: 1rem;
+}
 
 
 @media (min-width: 800px) {
@@ -110,6 +107,39 @@ ul {
         background: url(images/Mobile.svg) no-repeat;
         background-color: #202024;
         border-radius: 1rem;
+        /* background-size: 22.5rem 41rem; */
+    }
+    .avatar {
+        text-align: center;
+        margin-right: 2.25rem;
+    }
+    ul {
+        margin: 1.5rem auto 0;
+        gap: .75rem;
+        
+    }
+    .rope {
+        position: static;
+        z-index: 2;
+        width: 80px;
+        height: 600px;
+        background: linear-gradient(161.24deg, #FF008E -15.25%, #FFCD1E 111.89%);
+        border-radius: 0 0 3px 3px;
+        top: 0;
+        bottom: 0;
+        margin-top: -35rem;
+        margin-left: 8.94rem;
+        
+    }
+    .clasp {
+        position: absolute;
+        background: #121214;
+        z-index: 2;
+        width: 100px;
+        height: 12px;
+        margin-left: 8.3rem;
+        margin-top: -.75rem;
+        border-radius: 1.5rem;
     }
     .logoDoWhile {
         position: absolute;
@@ -120,42 +150,14 @@ ul {
         padding: .6rem;
         text-align: center;
         border-radius: 0.4rem;
-        margin-top: 10rem;
+        margin-top: 5rem
     
     }
-    
-    .avatar {
-        text-align: center;
-        margin-right: 2.25rem;
-    }
-    ul {
-        margin: 1.5rem auto 0;
-        gap: .75rem;
-
-    }
-    .rope {
-        position: absolute;
-        z-index: 2;
-        width: 80px;
-        height: 600px;
-        background: linear-gradient(161.24deg, #FF008E -15.25%, #FFCD1E 111.89%);
-        border-radius: 0 0 3px 3px;
-        top: 0;
-        margin-top: -30.79rem;
-        margin-left: 8.94rem;
-
-    }
-    .clasp {
-        position: absolute;
-        background: #121214;
-        z-index: 1;
-        width: 100px;
-        height: 12px;
-        margin-left: 8.3rem;
-        margin-top: 1.5rem;
-        border-radius: 1.5rem;
+    .container {
+        margin-top: -2.5rem;
     }
 }
+
 
 @keyframes loading {
     0% {
