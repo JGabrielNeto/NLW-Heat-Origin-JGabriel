@@ -1,8 +1,11 @@
 <!-- HTML é linguagem de marcação de hypertexto, ou seja, um texto com links -->
 <!DOCTYPE HTML>
 
-<html>
+<html lang="pt_BR">
     <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>João Gabriel - DoWhile 2021</title>
         <link rel="stylesheet" href="style.css"/>
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,13 +13,17 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     </head>
+
     <body>
         <main>
+            <!-- itens desktop -->
+            <div class="rope"></div>
+            <div class="clasp"></div>
             <!-- esta é a caixa do meio, que vai conter a foto e os links -->
             <div class="container">
                 <div class="avatar">
                     <span>
-                        <img src="images/build.svg" alt="Selo Rocketseat">
+                        <img id="spinning" src="images/build.svg" alt="Selo Rocketseat">
 
                     </span>
                     <img  id="gitAvatar" src="images/photo-jg.jpg" alt="Foto pessoal"/>
@@ -24,7 +31,7 @@
 
                 <h1 id="gitName">teste nome github</h1>
                 <a id="gitLink" href="https://github.com/" target="_blank">
-                    <img src="images/github 2.svg" alt="ícone github" target="_blank" />
+                    <img class="gitIcon" src="images/github 2.svg" alt="ícone github" target="_blank" />
                     <span id="gitUser">user test</span>
                 </a>
 
@@ -64,6 +71,9 @@
             </div>
             
         </main>
+            <div class="logoDoWhile">
+                <img src="images/logo-do-while-2021.png"></img>
+            </div>
 
         <script src="main.js"></script>
 
