@@ -9,8 +9,7 @@ html, body{
     height: 100%;
     font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
-    background-color: #121214;
-
+    background: url(images/background.webp) no-repeat center/cover;
 }
 body {
     display: grid;
@@ -87,16 +86,6 @@ ul {
     
 }
 
-.logoDoWhile {
-    position: absolute;
-    top: 0;
-    margin: 10vw auto 0;
-    left: 50vw;
-    margin-left: -155px;
-    background: rgba(0, 0, 0, 0.3);
-    padding: 1rem;
-    border-radius: 1rem;
-}
 
 
 @media (min-width: 800px) {
@@ -141,18 +130,7 @@ ul {
         margin-top: -.75rem;
         border-radius: 1.5rem;
     }
-    .logoDoWhile {
-        position: absolute;
-        top: 0;
-        background: rgba(0%, 0%, 0%, 0.3);
-        height: 42px;
-        width: 300px;
-        padding: .6rem;
-        text-align: center;
-        border-radius: 0.4rem;
-        margin-top: 5rem
     
-    }
     .container {
         margin-top: -2.5rem;
     }
