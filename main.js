@@ -3,7 +3,7 @@ const socialLinks = {
      linkedin: 'in/jgabrielneto-dev/',
      facebook: 'joaogabriel.dantasneto',
      instagram: 'joaogabrielsneto',
-     twitter: 'JGabrielNeto_'
+     twitter: 'JGabrielNeto_'  
  }
      // padrões de escrita: camelCase; PascalCase; snake_case
      
@@ -19,7 +19,7 @@ function changeLinks() {
          //os itens filhos da id="ytLink" e armazenando. Dentro da variável foi
          //criada uma constante social, que contém o atributo classe da variável li
 
-         for(let li of ytLink.children) {
+         for(let li of links.children) {
              const social = li.getAttribute('class')
       
             //os [] tão chamando somando o valor de social da class equivalente ao social da const

@@ -3,50 +3,48 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 html, body{
     --black: #202024;
     --grey: #E1E1E6;
     height: 100%;
     font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
-    background: url(images/background.webp) no-repeat center/cover;
-}
+    background: rgb(9,9,10);
+    background: linear-gradient(45deg, rgba(9,9,10,1) 0%, rgba(32,32,36,1) 39%, rgba(255,0,142,1) 63%, rgba(255,122,41,1) 85%, rgba(255,205,30,1) 100%); }
+
 body {
     display: grid;
-    place-items: center;
-    
+    place-items: center;   
 }
+
 main{
     background:url(images/Mobile.svg) no-repeat center/cover;
     width: 100vw;
     height: 100vh;
     max-width: 485px;
+    display: grid;
+    place-items: center;
 }
-
-
 
 .container {
     max-width:250px;
-    margin-left: auto;
-    margin-right: auto;
     text-align: center;
     color: var(--grey);
     font-size: 1.25rem;
 }
 
 .avatar{
-    /* width: 10rem; */
-    margin: 11.5rem 20% 0;
     position: relative;
 }
 
-.avatar span{
+#spinning {
     position: absolute;
-    top: -15px;
-    z-index: 1;;
+    top: -1rem;
+    z-index: 1;
 }
 
-.avatar > img{
+#gitAvatar {
     width: 10rem;
     height: 11.5rem;
     object-fit: cover;
@@ -55,27 +53,29 @@ main{
     transform: scaleX(-1); 
 }
 
-h1 {
+#gitName {
     font-size: 1.75rem;
     font-weight: 700;
     margin-top: 1.5rem;
     margin-bottom: .25rem;
 }
 
-a{
+#gitLink {
     color: var(--grey);
-    text-decoration: none;
+    text-decoration: none; 
+    /* Cria um gap entre o giticon e o gitname */
     display: flex;
     gap: .75rem;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center;   
 }
-p{
+
+#gitBio {
     margin-top: 1.5rem;
     font-weight: 400;
     font-size: 1.15rem;
 }
+
 ul {
     margin-top: 4rem;
     list-style-type: none;
@@ -83,59 +83,48 @@ ul {
     display: flex;
     gap: .5rem;
     justify-content: center;
-    
 }
-
-
 
 @media (min-width: 800px) {
     main {
-        
-        width: 22.5rem;
-        height: 41rem;
-        background: url(images/Mobile.svg) no-repeat;
+        display: grid;
+        place-items: center;
+        background: url(images/Mobile.svg) no-repeat center/cover;
         background-color: #202024;
-        border-radius: 1rem;
-        /* background-size: 22.5rem 41rem; */
+        border-radius: 2rem;
+        height: 80vh;
+        width: 25vw;
     }
-    .avatar {
-        text-align: center;
-        margin-right: 2.25rem;
-    }
+   
     ul {
         margin: 1.5rem auto 0;
         gap: .75rem;
-        
     }
-    .rope {
-        position: static;
+
+    #ropeClasp {
+        display: grid;
+        place-items: center;
+        margin-bottom: 1rem;
+    }
+
+    #rope {
+        position: absolute;
+        bottom: 77.5vh;
         z-index: 2;
-        width: 80px;
-        height: 600px;
+        width: 64px;
+        height: 300px;
         background: linear-gradient(161.24deg, #FF008E -15.25%, #FFCD1E 111.89%);
-        border-radius: 0 0 3px 3px;
-        top: 0;
-        bottom: 0;
-        margin-top: -35rem;
-        margin-left: 8.94rem;
-        
     }
-    .clasp {
+
+    #clasp {
         position: absolute;
         background: #121214;
-        z-index: 2;
-        width: 100px;
+        width: 76px;
         height: 12px;
-        margin-left: 8.3rem;
-        margin-top: -.75rem;
         border-radius: 1.5rem;
-    }
-    
-    .container {
-        margin-top: -2.5rem;
+        top: 11px
     }
 }
-
 
 @keyframes loading {
     0% {
@@ -144,7 +133,6 @@ ul {
     100% {
         transform: rotate(360deg);
     }
-    
 }
 
 #gitAvatar {
@@ -156,27 +144,28 @@ ul {
     width: 10rem;
     height: 13rem;
 }
+
 a > img {
     position: relative;
     width: 50px;
     top: 0;
-    border-radius: 0.4rem;
+    border-radius: 0.5rem;
     transition: all ease .3s;
 }
 
 a > img:hover {
     transition: all ease 0.25s;
-    border-radius: 45%;
-    box-shadow: 0 0 .5rem #FFCD1E;
-    
+    border-radius: 50%;
+    box-shadow: 0 0 .8rem #FFCD1E;
 }
 
 #spinning {
     animation: loading 10s linear infinite;
+    height: 86px;
+    width: 86px;
 }
 
 .gitIcon {
     height: 20px;
     width: 20px;
- 
 }
